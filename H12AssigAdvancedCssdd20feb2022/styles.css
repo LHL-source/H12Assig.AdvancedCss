@@ -1,0 +1,293 @@
+/*variabel gebruikt bij opdr 1 class=name class-webname*/
+/*@import is gebruikt bij opdr1 class=text*/
+/* opdracht1 Testimonial*/
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.body {
+  color: black;
+  background-color: #c3cfe2;
+}
+
+.wrapper-grid {
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr);
+  justify-content: center;
+  margin-top: 2rem;
+  /* padding:5px;*/
+  /*grid-gap*/
+}
+
+.container {
+  width: 30%;
+  height: inherit;
+  box-shadow: 0px 2px 8px 0px;
+  text-align: center;
+  border-radius: 1rem;
+  position: relative;
+  overflow-wrap: break-word;
+}
+
+.text {
+  background-color: #fff;
+  height: 10rem;
+  width: 100%;
+  /*auto*/
+  padding: 3rem;
+  color: #127ed6;
+  /* text-align: center;*/
+}
+
+.profile {
+  width: 8rem;
+  -webkit-clip-path: circle(30px at center);
+          clip-path: circle(30px at center);
+  margin-bottom: -2.5rem;
+}
+
+.name {
+  font-size: 1rem;
+  color: red;
+}
+
+.webnaam {
+  font-size: 0.75rem;
+  margin: 1rem 2rem;
+  color: red;
+}
+
+.under {
+  height: 10rem;
+  width: auto;
+  background-color: #686de0;
+  padding: 2rem;
+}
+
+/*opdracht2: 7 foto's responsive, Fade Overlay werkt niet*/
+.body {
+  background-color: #c3cfe2;
+  padding: 10px;
+}
+
+.gridcontainer {
+  display: grid;
+  grid-gap: 16px;
+  padding: 16px;
+}
+
+/*.testhover{
+  color: rgb(192, 32, 32);
+&:hover {
+  background-color: yellow;
+}*/
+.boxone {
+  opacity: 1;
+  transition: 0.6s;
+  /*Fade Overlay*/
+}
+.boxone:hover {
+  opacity: 0.2;
+}
+.boxone .container {
+  position: relative;
+  width: 50%;
+  /*.container:hover .image {
+        opacity: 0.3;
+      }*/
+  /*.container:hover .middle {
+        opacity: 1;
+      }*/
+}
+.boxone .container:hover .image {
+  opacity: 0.3;
+}
+.boxone .container:hover .middle {
+  opacity: 1;
+}
+.boxone .image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.boxone .middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.boxone .text {
+  background-color: #04aa6d;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+@media (min-width: 320px) {
+  .gridcontainer {
+    grid-template-columns: repeat(1 1fr);
+  }
+
+  .body {
+    background-color: #c3cfe2;
+  }
+}
+@media (min-width: 768px) {
+  .gridcontainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .body {
+    background-color: #c3cfe2;
+  }
+}
+@media (min-width: 1024px) {
+  .gridcontainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .body {
+    background-color: #c3cfe2;
+  }
+}
+/* @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+      .body {
+          background-color: red;
+        }
+  }*/
+/*opdracht 3:Social Media Button*/
+.grid_container {
+  display: grid;
+  grid-template-columns: auto;
+  position: relative;
+  background-color: #c3cfe2;
+  padding: 1px;
+  border-style: solid;
+  border-color: none;
+}
+
+.inhoud {
+  background-color: red;
+  padding: 50px;
+  border-style: none;
+  border-color: none;
+}
+
+.grid_container_button {
+  display: grid;
+  grid-template-columns: auto;
+  border-color: black;
+  padding: 10px;
+  background-color: #c3cfe2;
+}
+
+/*bij media queries 1024 px*/
+/*Github*/
+.but1 {
+  width: 10%;
+  height: 10%;
+  border-style: solid;
+  padding: 2px;
+  border-color: black;
+  background-color: whitesmoke;
+  text-align: center;
+  position: absolute;
+  right: 2%;
+  bottom: 5%;
+  transition: width 2s;
+  transition-timing-function: ease-in-out;
+}
+.but1:hover {
+  width: 50%;
+  background-color: whitesmoke;
+}
+
+/*facebook*/
+.but2 {
+  width: 10%;
+  height: 8%;
+  border-style: solid;
+  padding: 2px;
+  border-color: black;
+  text-align: center;
+  background: #3b5998;
+  position: absolute;
+  right: 2%;
+  bottom: 17%;
+  transition: width 2s;
+  transition-timing-function: ease-in-out;
+}
+.but2:hover {
+  width: 50%;
+  background-color: #3b5998;
+}
+
+/*linkIn*/
+.but3 {
+  width: 10%;
+  height: 8%;
+  border-style: solid;
+  padding: 2px;
+  border-color: black;
+  text-align: center;
+  background-color: #007bb5;
+  position: absolute;
+  right: 2%;
+  bottom: 29%;
+  transition: width 2s;
+  transition-timing-function: ease-in-out;
+}
+.but3:hover {
+  width: 50%;
+  background-color: #007bb5;
+}
+.but3 .fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa fa-github {
+  background: black;
+  color: white;
+}
+
+/*vertikaal menubar*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li a {
+  display: block;
+  width: 100px;
+  background-color: lightgrey;
+  text-decoration: none;
+  border-style: solid;
+  border-color: lightgrey;
+}
+
+li a:hover {
+  background-color: lightblue;
+}
+
+/*body*/
+.body {
+  background-color: #c3cfe2;
+}/*# sourceMappingURL=styles.css.map */
